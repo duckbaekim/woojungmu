@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import Wheader from './component/Wheader.js';
+import Search from './component/Search.js'
+import Resultbox from './component/Resultbox.js'
+import Addview from './component/Addview.js'
+
 import './App.css';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Wheader/>
+        <Search/>
+        <Resultbox/>
+        <Addview/>
+      Hello World! 
     </div>
   );
 }
