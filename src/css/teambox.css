@@ -1,0 +1,86 @@
+.teambox {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.team-camp {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    line-height: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.team-camp img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+.label-camp {
+    padding-top: 1px;
+    font-weight: 500;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.kill-gold {
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
+    width: 180px;
+}
+
+.total-kills,
+.total-gold {
+    flex: 1;
+}
+
+.total-dragons {
+    margin-top: 14px;
+}
+
+.total-barons,
+.total-turrets {
+    margin-top: 8px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1px;
+}
+
+.kill-score {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.gold-score,
+.turret-score {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.gold-score {
+    line-height: 1.1;
+}
+
+.turret-score {
+    line-height: 1;
+}
+
+.total-dragons img,
+.total-barons img {
+    margin-right: 6px;
+    height: 20px;
+}
+
+.drakes {
+    margin-top: 4px;
+}

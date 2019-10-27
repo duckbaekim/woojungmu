@@ -1,0 +1,200 @@
+.user {
+    display: flex;
+    flex-direction: column;
+
+    margin: -5px 0;
+}
+
+.user-detail {
+    display: flex;
+    flex-direction: row;
+
+    margin: 5px 0;
+}
+
+.spell-rune,
+.nickname-kda,
+.tier,
+.items-trinket {
+    margin-left: 10px;
+    height: 48px;
+}
+
+.cs-damage {
+    margin-left: 10px;
+}
+
+.champion {
+    position: relative;
+    height: 50px;
+}
+
+.champion img {
+    height: 50px;
+    border-radius: 4px;
+}
+
+.level {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    background: #121212;
+    width: 14px;
+    padding: 3px 3px 5px 3px;
+    border-radius: 4px;
+}
+
+.spell-rune {
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+}
+
+.spell,
+.rune {
+    display: flex;
+    flex-direction: column;
+}
+
+.spell img,
+.rune img {
+    margin: 1px;
+}
+
+.spell img {
+    height: 22px;
+}
+
+.rune img {
+    background-color: #000000;
+}
+
+.rune-keystone {
+    width: 22px;
+    height: auto;
+}
+
+.rune-secondary {
+    width: 18px;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.nickname-kda {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    padding: 1px 0;
+    min-width: 134px;
+}
+
+.nickname {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: -1px;
+}
+
+.kda {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: -2px;
+}
+
+.mvp {
+    display: inline;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    color: #121212;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-align: center;
+    padding: 3px 8px 4px 8px;
+    border-radius: 9px;
+    background-color: #ffd12a;
+}
+
+.tier {
+    width: 14px;
+    height: 18px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 1px 8px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cs-damage {
+    display: flex;
+    flex-direction: column;
+
+    padding: 4px 0 2px 0;
+}
+
+.cs,
+.value {
+    font-size: 11px;
+    line-height: 1.36;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.damage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+}
+
+.graph {
+    width: 74px;
+    height: 6px;
+    margin-top: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.graph-bar {
+    width: 56px;
+    height: 2px;
+    margin-top: 2px;
+    margin-left: 2px;
+    background-color: #ffffff;
+}
+
+.items-trinket {
+    display: flex;
+    flex-direction: row;
+
+    padding: 1px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.item,
+.trinket {
+    height: 24px;
+}
+
+.items img,
+.trinket img{
+    margin: 1px;
+    height: 22px;
+}
