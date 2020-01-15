@@ -56,24 +56,24 @@ class Teambox extends Component{
 	
 	
 	dragonList = (dragon) => {
-		const dragonArr = dragon.split(',');
-		let drx=[];
-		for(let i; i<dragonArr.length; i++){
-			if(dragonArr[i]=='EARTH_DRAGON'){
-				drx.push(<img src="/images/Mountain_Drake.png"></img>)
-			}else if(dragonArr[i]=='WATER_DRAGON'){
-				drx.push(<img src="/images/Ocean_Drake.png"></img>)
-			}else if(dragonArr[i]=='FIRE_DRAGON'){
-				drx.push(<img src="/images/Infernal_Drake.png"></img>)
-			}else if(dragonArr[i]=='AIR_DRAGON'){
-				drx.push(<img src="/images/Cloud_Drake.png"></img>)
-			}
-		}
-		return (
-			<div className="drakes">
-			{drx}
-			</div>
-			)
+//		const dragonArr = dragon.split(',');
+//		let drx=[];
+//		for(let i; i<dragonArr.length; i++){
+//			if(dragonArr[i]=='EARTH_DRAGON'){
+//				drx.push(<img src="/images/Mountain_Drake.png"></img>)
+//			}else if(dragonArr[i]=='WATER_DRAGON'){
+//				drx.push(<img src="/images/Ocean_Drake.png"></img>)
+//			}else if(dragonArr[i]=='FIRE_DRAGON'){
+//				drx.push(<img src="/images/Infernal_Drake.png"></img>)
+//			}else if(dragonArr[i]=='AIR_DRAGON'){
+//				drx.push(<img src="/images/Cloud_Drake.png"></img>)
+//			}
+//		}
+//		return (
+//			<div className="drakes">
+//			{drx}
+//			</div>
+//			)
 		
 		
 		
@@ -96,7 +96,6 @@ render(){
   return (
     <div className="teambox">
 	  {this.teamArea(teamId)}
-	{teamId}
       <div className="kill-gold">
         <div className="total-kills">
           <div className="label">Kill</div>
@@ -109,13 +108,13 @@ render(){
       </div>
       <div className="total-dragons">
         <div className="label">드래곤</div>
-        //<div className="drakes">
-        //  <img src="/images/Mountain_Drake.png"></img>
-        //  <img src="/images/Infernal_Drake.png"></img>
-        //  <img src="/images/Infernal_Drake.png"></img>
-        //  <img src="/images/Infernal_Drake.png"></img>
-        //  <img src="/images/Cloud_Drake.png"></img>
-        //</div>
+          <div className="drakes">
+          <img src="/images/Mountain_Drake.png"></img>
+          <img src="/images/Infernal_Drake.png"></img>
+          <img src="/images/Infernal_Drake.png"></img>
+          <img src="/images/Infernal_Drake.png"></img>
+          <img src="/images/Cloud_Drake.png"></img>
+        </div>
 		
 		{this.dragonList(dragon)}
         <div className="elders">
