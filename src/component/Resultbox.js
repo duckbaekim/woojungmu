@@ -33,7 +33,7 @@ const Resultbox = ({
 					<span className="play-minute">{parseInt(gameDuration/60)}</span>분 <span className="play-second">{parseInt(gameDuration%60)}</span>초
 				  </div>
 				</div>
-				<div className="blue-side">
+				<div className="purple-side">
 				  <div className="game-result">
 				  	  {win==200? 
 					<div className="game-result-lose">패배</div> : 
@@ -51,7 +51,7 @@ const Resultbox = ({
 					</div>
 				  </div>
 				</div>
-				<div className="purple-side">
+				<div className="blue-side">
 				  <div className="game-result">
 					 {win==100? 
 					<div className="game-result-lose">패배</div> : 
