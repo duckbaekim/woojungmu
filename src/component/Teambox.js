@@ -11,7 +11,7 @@ class Teambox extends Component{
 			teamId: props.teamId,
 			gameNo: props.gameNo,
 			towerKill: props.towerKill,
-			dragon: [],
+			dragon: '',
 			naesher:'',
 			totalKill:0,
 			goldEarned:0
@@ -55,27 +55,39 @@ class Teambox extends Component{
 	}
 	
 	
-	dragonList = (dragon) => {
-//		const dragonArr = dragon.split(',');
-//		let drx=[];
-//		for(let i; i<dragonArr.length; i++){
-//			if(dragonArr[i]=='EARTH_DRAGON'){
-//				drx.push(<img src="/images/Mountain_Drake.png"></img>)
-//			}else if(dragonArr[i]=='WATER_DRAGON'){
-//				drx.push(<img src="/images/Ocean_Drake.png"></img>)
-//			}else if(dragonArr[i]=='FIRE_DRAGON'){
-//				drx.push(<img src="/images/Infernal_Drake.png"></img>)
-//			}else if(dragonArr[i]=='AIR_DRAGON'){
-//				drx.push(<img src="/images/Cloud_Drake.png"></img>)
-//			}
-//		}
-//		return (
-//			<div className="drakes">
-//			{drx}
-//			</div>
-//			)
-		
-		
+	dragonList = (dragon:string) => {
+			let drx=[];
+			let elders=[];
+			for(let i=0; i<dragon.length; i++){
+				if(dragon[i]=='EARTH_DRAGON'){
+					drx.push(<img src="/images/Mountain_Drake.png"></img>)
+				}else if(dragon[i]=='WATER_DRAGON'){
+					drx.push(<img src="/images/Ocean_Drake.png"></img>)
+				}else if(dragon[i]=='FIRE_DRAGON'){
+					drx.push(<img src="/images/Infernal_Drake.png"></img>)
+				}else if(dragon[i]=='AIR_DRAGON'){
+					drx.push(<img src="/images/Cloud_Drake.png"></img>)
+				}
+				if(dragon[i]=='ELDER_DRAGON'){
+					elders.push(<img src="/images/Elder_Dragon.png"></img>)
+				}
+			}
+			
+			if(drx.length==0 && elders.length==0){
+				drx.push(<img src="/images/noData.png"></img>)
+			}
+			      
+			return (
+				<div className="total-dragons"> 
+					<div className="label">드래곤</div>
+					<div className="drakes">
+						{drx}
+					</div>
+					<div className="elders">
+						{elders}
+					</div>
+				</div>
+				)
 		
 	}
 
@@ -106,26 +118,14 @@ render(){
           <div className="gold-score">{goldEarned}</div>
         </div>
       </div>
-      <div className="total-dragons">
-        <div className="label">드래곤</div>
-          <div className="drakes">
-          <img src="/images/Mountain_Drake.png"></img>
-          <img src="/images/Infernal_Drake.png"></img>
-          <img src="/images/Infernal_Drake.png"></img>
-          <img src="/images/Infernal_Drake.png"></img>
-          <img src="/images/Cloud_Drake.png"></img>
-        </div>
-		
-		{this.dragonList(dragon)}
-        <div className="elders">
-          <img src="/images/Elder_Dragon.png"></img>
-          <img src="/images/Elder_Dragon.png"></img>
-        </div>
-      </div>
+			{this.dragonList(dragon)}
       <div className="total-barons">
         <div className="label">내셔 남작</div>
-        <img src="/images/Baron_Nashor.png"></img>
-        <img src="/images/Baron_Nashor.png"></img>
+		{
+			teamId == naesher ?
+			<img src="/images/Baron_Nashor.png"></img>
+			: <img src="/images/noData.png"></img>
+		}
       </div>
       <div className="total-turrets">
         <div className="label">파괴한 포탑</div>

@@ -1,7 +1,51 @@
-import React from 'react';
+import React,{Component} from 'react';
 import '../css/user.css';
+import * as service from './service';
 
-function User() {
+
+class User extends Component{
+	constructor(props){
+		super();
+
+		this.state={
+			gameNo : props.gameNo,
+			teamId : props.teamId,
+			level : 0,
+			spell : [],
+			rune : [],
+			nickname : "",
+			kill : 0,
+			death : 0,
+			assistant : 0,
+			mvp : 0,
+			tier : "",
+			cs : 0,
+			damage : 0,
+			itemList : [],
+			champion : 0
+		};
+	
+	}
+	
+		fetchUserInfo = async (teamId, gameNo) => {
+		
+        const userInfo = await service.userInfo(teamId,gameNo);
+		if(gameNo==99){
+			console.log(userInfo);
+		}
+	
+		
+    }
+	
+		componentDidMount() {
+		const {teamId, gameNo} = this.state;
+        this.fetchUserInfo(teamId, gameNo);
+		
+		
+    }
+	
+
+render(){
   return (
     <div className="user">
       <div className="user-detail">
@@ -312,5 +356,7 @@ function User() {
     </div>
   );
 }
+}
+
 
 export default User;

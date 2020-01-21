@@ -18,3 +18,6 @@ export function teamInfo(teamId, gameNo){
 }
 
 
+export function userInfo(teamId, gameNo){
+	return axios.get(baseUrl+"userInfo?teamId="+teamId+"&gameNo="+gameNo);
+}

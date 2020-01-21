@@ -35,35 +35,35 @@ const Resultbox = ({
 				</div>
 				<div className="blue-side">
 				  <div className="game-result">
-				  	  {win==100? 
+				  	  {win==200? 
 					<div className="game-result-lose">패배</div> : 
 					<div className="game-result-win">승리</div> 
 				  }
 					<div className="result-detail">
-					  <Teambox teamId={100}
+					  <Teambox teamId={200}
 								gameNo={gameNo}
-								towerKill={towerKill100}
+								towerKill={towerKill200}
 					  >
 					  </Teambox>
 					  <User gameNo={gameNo}
-							teamId={100}
+							teamId={200}
 					  ></User>
 					</div>
 				  </div>
 				</div>
 				<div className="purple-side">
 				  <div className="game-result">
-					 {win==200? 
+					 {win==100? 
 					<div className="game-result-lose">패배</div> : 
 					<div className="game-result-win">승리</div>
 				  }
 					<div className="result-detail">
-					  <Teambox teamId={200}
+					  <Teambox teamId={100}
 								gameNo={gameNo}
-								towerKill={towerKill200}
+								towerKill={towerKill100}
 					  ></Teambox>
 					  <User gameNo={gameNo}
-							teamId={200}
+							teamId={100}
 					  ></User>
 					</div>
 				  </div>
