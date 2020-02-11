@@ -1,55 +1,45 @@
 import React,{Component} from 'react';
 import '../css/user.css';
+import User from '../component/User';
 import * as service from './service';
 
+class UserList extends Component{
 
-//class ResultboxList extends Component{
-//	
-//	getInfo = async (id) =>{
-//		const result = await service.getId(id);
-//		console.log(result);
-//	}
-//
-//	render() {
-//		  return (
-//			<div className="resultboxList">
-//				<Resultbox />
-//				<Resultbox />
-//				<Resultbox />
-//				<Resultbox />
-//				<Resultbox />
-//			</div>
-//		  );
-//	}
-//
-//}
-
-const ResultboxList = ({totalList}) => {
-	const resultboxList = totalList.map(
-		(list, i)=>(
-				<Resultbox 
-					gameNo={list.gameNo} 
-					win={list.win}
-					firstBlood={list.firstBlood}
-					firstDragon={list.firstDragon}
-					firstBaron={list.firstBaron}
-					firstTower={list.firstTower} 
-					towerKill100={list.towerKill100}
-					towerKill200={list.towerKill200} 
-					createDate={list.createDate}
-					gameDuration={list.gameDuration}
-					key={i}
-				/>
-			)
-	);
+    constructor(props){
+	    super();
+		
+		this.state={
+			gameNo: props.gameNo,
+			teamId : props.teamId,
+			user: []
+		}
+	}
 	
+	fetchUserInfo = async (teamId, gameNo) => {
+		const userInfo = await service.userInfo(teamId, gameNo);
+		console.log(userInfo);
+		
+		this.setState({
+			user : userInfo
+		});
+	}		
+	
+	componentDidMount(){
+		const {teamId, gameNo} = this.state;
+		this.fetchUserInfo(teamId, gameNo);
+	}
+	
+	
+render(){
+	
+
 	return (
-		<div className="resultboxList">
-			{resultboxList}
+		<div className="userList">
+			
 		</div>
 	);
 };
 
+}
 
-
-export default ResultboxList;
+export default UserList;

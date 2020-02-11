@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../css/resultbox.css';
 import Teambox from '../component/Teambox';
-import User from '../component/User';
+import UserList from '../component/UserList';
 import * as service from '../component/service';
 
 
@@ -45,9 +45,9 @@ const Resultbox = ({
 								towerKill={towerKill200}
 					  >
 					  </Teambox>
-					  <User gameNo={gameNo}
+					  <UserList gameNo={gameNo}
 							teamId={200}
-					  ></User>
+					  ></UserList>
 					</div>
 				  </div>
 				</div>
@@ -62,9 +62,9 @@ const Resultbox = ({
 								gameNo={gameNo}
 								towerKill={towerKill100}
 					  ></Teambox>
-					  <User gameNo={gameNo}
+					  <UserList gameNo={gameNo}
 							teamId={100}
-					  ></User>
+					  ></UserList>
 					</div>
 				  </div>
 				</div>
