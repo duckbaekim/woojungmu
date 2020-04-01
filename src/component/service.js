@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = 'https://dbkim.cf/riot/';
+const baseUrl = 'https://dbkim.cf/service/';
 
 
 export function getId(id){

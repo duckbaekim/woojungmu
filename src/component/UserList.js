@@ -19,6 +19,9 @@ class UserList extends Component{
 		const userInfo = await service.userInfo(teamId, gameNo);
 		console.log(userInfo);
 		
+		for(let i=0; i< userInfo.length; i ++){
+			
+		}
 		this.setState({
 			user : userInfo
 		});
